@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     bool isGrounded;
     bool canJump;
 
+    [SerializeField]
+    public Transform player;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,5 +63,13 @@ public class Player : MonoBehaviour
     void Update()
     {
         PlayerControls();
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            player.position = new Vector2(-6.0f, -4.0f);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            player.position = new Vector2(36.0f, -4.0f);
+        }
     }
 }
