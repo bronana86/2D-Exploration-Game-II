@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CameraFollow : MonoBehaviour
+public class TextManager : MonoBehaviour
 {
     [SerializeField]
-    public Transform player;
+    GameObject text;
 
     void Update()
     {
-        transform.position = new Vector3(player.position.x, player.position.y, -51);
         if (Input.GetKey(KeyCode.Escape))
         {
-            SceneManager.LoadScene(0);
+            text.SetActive(true);
+            //SceneManager.UnloadSceneAsync(1);
         }
     }
 }

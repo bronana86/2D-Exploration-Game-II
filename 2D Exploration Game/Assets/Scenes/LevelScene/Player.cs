@@ -27,6 +27,17 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    void Awake()
+    {
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            player.position = new Vector2(-6.0f, -4.0f);
+        }
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            player.position = new Vector2(36.0f, -4.0f);
+        }
+    }
     void PlayerControls()
     {
         moveX = Input.GetAxis("Horizontal");
@@ -63,13 +74,5 @@ public class Player : MonoBehaviour
     void Update()
     {
         PlayerControls();
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            player.position = new Vector2(-6.0f, -4.0f);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            player.position = new Vector2(36.0f, -4.0f);
-        }
     }
 }
