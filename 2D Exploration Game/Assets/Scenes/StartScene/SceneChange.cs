@@ -8,10 +8,6 @@ public class SceneChange : MonoBehaviour
     [SerializeField]
     public Transform text;
 
-    void Start()
-    {
-    }
-    
 
     // Update is called once per frame
     void Update()
